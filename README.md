@@ -11,7 +11,9 @@ Please do not sell my codes over the internet, do not use it in your homework an
 We have the right to take legal action in the event that the application is shared on the internet, distribution, claiming right ownership, selling it for a fee.
 These codes are shared only for you to learn the SQL Lite structure.
 Anyone who have access to the codes is agree to have unconditionally accepted these terms.
+
 All Rights Reserved.
+
 APPBeta Mobile - www.APPBeta.net
 ## Plagiarism Warning:
 
