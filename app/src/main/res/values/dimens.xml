@@ -1,0 +1,78 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <!-- Item Design Section -->
+
+    <dimen name="cardView_Radius">3dp</dimen>
+    <dimen name="cardView_Padding">20dp</dimen>
+    <dimen name="cardView_Elevation">10dp</dimen>
+    <dimen name="cv_descriptionPadding">5dp</dimen>
+    <dimen name="cv_descriptionHeight">80dp</dimen>
+    <dimen name="cv_descriptionTextSize">12sp</dimen>
+    <dimen name="cv_titleTextSize">22sp</dimen>
+    <dimen name="cv_buttons">10dp</dimen>
+
+
+    <!-- Show Content Design -->
+    <dimen name="show_cardView_Radius">3dp</dimen>
+    <dimen name="show_cardView_Padding">20dp</dimen>
+    <dimen name="show_cardView_Elevation">25dp</dimen>
+    <dimen name="show_descriptionTextSize">14sp</dimen>
+    <dimen name="show_descriptionPadding">5dp</dimen>
+    <dimen name="show_titleTextSize">22sp</dimen>
+    <dimen name="ayrac">2dp</dimen>
+    <dimen name="ayracMargin">5dp</dimen>
+    <dimen name="show_cardView_marginTop">0dp</dimen>
+
+
+    <!-- Add Content -->
+    <dimen name="add_buttonHeigth">70dp</dimen>
+    <dimen name="add_buttonIconSize">64dp</dimen>
+
+    <dimen name="add_cardView_Radius">3dp</dimen>
+    <dimen name="add_cardView_Padding">15dp</dimen>
+    <dimen name="add_cardView_Elevation">15dp</dimen>
+
+    <dimen name="add_titleTextSize">22sp</dimen>
+    <dimen name="add_descriptionTextSize">14sp</dimen>
+    <dimen name="add_descriptionPadding">5dp</dimen>
+
+    <dimen name="add_ayrac">2dp</dimen>
+    <dimen name="add_ayracMargin">5dp</dimen>
+
+
+    <!-- Setting Content -->
+    <dimen name="setting_cv_radius">5dp</dimen>
+    <dimen name="setting_cv_elevation">20dp</dimen>
+    <dimen name="setting_cv_padding">5dp</dimen>
+
+    <dimen name="setting_linearLayout_Padding">10dp</dimen>
+
+    <dimen name="setting_dividerHeight">3dp</dimen>
+    <dimen name="setting_dividerMarginTop">10dp</dimen>
+    <dimen name="setting_dividerMarginBottom">10dp</dimen>
+    <dimen name="setting_textSize">16sp</dimen>
+    <dimen name="setting_RadioGroupStart">50dp</dimen>
+
+    <dimen name="setting_radioButton2Padding">10dp</dimen>
+
+
+    <!-- Password Page -->
+    <dimen name="logoHeight">180dp</dimen>
+    <dimen name="logoMargin">64dp</dimen>
+    <dimen name="passPage_TextSize">36sp</dimen>
+    <dimen name="passPage_pW_Height">50dp</dimen>
+    <dimen name="passPage_pW_marginStart">25dp</dimen>
+    <dimen name="passPage_pW_marginTop">50dp</dimen>
+    <dimen name="passPage_pW_marginEnd">25dp</dimen>
+    <dimen name="passPage_pW_marginBottom">25dp</dimen>
+    <dimen name="passPage_pW_paddingStart">10dp</dimen>
+    <dimen name="passPage_pW_paddingEnd">10dp</dimen>
+    <dimen name="saveBTN_margin">50dp</dimen>
+    <dimen name="saveBTN_marginStart">100dp</dimen>
+    <dimen name="saveBTN_marginEnd">100dp</dimen>
+
+
+
+</resources>

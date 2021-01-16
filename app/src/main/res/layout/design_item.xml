@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/cardView_Radius"
+    app:cardElevation="@dimen/cardView_Elevation"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/cardView_Padding">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/openContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/itemTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/gudea_bold"
+                android:text="@string/title"
+                android:textSize="@dimen/cv_titleTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemDescription"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/cv_descriptionHeight"
+                android:fontFamily="@font/gudea"
+                android:padding="@dimen/cv_descriptionPadding"
+                android:text="@string/description"
+                android:textSize="@dimen/cv_descriptionTextSize" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/editBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/cv_buttons"
+                android:layout_marginTop="@dimen/cv_buttons"
+                android:layout_weight="1"
+                android:text="@string/editBTN"
+                app:icon="@drawable/button_edit" />
+
+            <Button
+                android:id="@+id/delBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/cv_buttons"
+                android:layout_marginTop="@dimen/cv_buttons"
+                android:layout_weight="1"
+                android:text="@string/delBTN"
+                app:icon="@drawable/button_del" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

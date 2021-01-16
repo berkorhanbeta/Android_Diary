@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="@dimen/add_cardView_Radius"
+        app:cardElevation="@dimen/add_cardView_Elevation"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="@dimen/add_cardView_Padding">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/addTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@null"
+                android:fontFamily="@font/gudea_bold"
+                android:hint="@string/secretTitle"
+                android:textSize="@dimen/show_titleTextSize"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/addAyrac2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/add_ayrac"
+                android:layout_below="@id/addTitle"
+                android:layout_marginTop="@dimen/add_ayracMargin"
+                android:background="@color/ayrac" />
+
+            <EditText
+                android:id="@+id/addDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/addAyrac"
+                android:layout_below="@+id/addAyrac2"
+                android:background="@null"
+                android:fontFamily="@font/gudea"
+                android:gravity="top"
+                android:hint="@string/secretDesc"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/add_descriptionPadding"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/addAyrac"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/add_ayrac"
+                android:layout_above="@+id/linearLayout"
+                android:layout_marginBottom="@dimen/add_ayracMargin"
+                android:background="@color/ayrac" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_above="@+id/addBTN"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gudea"
+                    android:text="@string/highlight" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/addBTN"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/add_buttonHeigth"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:textAlignment="center"
+                app:icon="@drawable/button_add"
+                app:iconGravity="textStart"
+                app:iconSize="@dimen/add_buttonIconSize" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

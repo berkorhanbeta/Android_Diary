@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="MissingTranslation">Orhan_Berk_My Secrets</string>
+
+    <string name="mainTitle">My Diary</string>
+    <string name="mSearch">Search</string>
+    <string name="mAdd">Add New Diary</string>
+    <string name="mDeleteAll">Delete All Secrets</string>
+    <string name="settings">Settings</string>
+
+    <string name="delAllQuestion">Are you sure to delete all Diary?</string>
+    <string name="delQuestion">Are you sure to delete this Diary?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="showSecret">Showing Diary</string>
+
+    <!-- Buttons -->
+    <string name="editBTN">Edit</string>
+    <string name="delBTN">Delete</string>
+
+
+    <string name="secretTitle">Title Of The Diary</string>
+    <string name="secretDesc">Content Of The Diary</string>
+    <string name="highlight">Highlight The Diary</string>
+
+
+    <string name="hLightColorText">Change The Highlight Color Of Diary</string>
+    <string name="orderByText">List Diary By Order</string>
+    <string name="first_last">First to Last</string>
+    <string name="last_first">Last to First</string>
+
+    <string name="enterPass">Enter Your Password</string>
+    <string name="enterBtn">Open</string>
+    <string name="saveBtn">Save</string>
+    <string name="wrongPass">Your Password Is Wrong!</string>
+    <string name="newPass">Enter A Password</string>
+    <string name="createPass">Create New Password</string>
+
+    <!-- Demo Text -->
+    <string name="title" tools:ignore="MissingTranslation">What Is Lorem Ipsum</string>
+    <string name="description" tools:ignore="MissingTranslation">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        \n
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        \n
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </string>
+
+
+
+
+</resources>

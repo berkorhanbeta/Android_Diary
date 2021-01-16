@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/setting_cv_radius"
+    app:cardElevation="@dimen/setting_cv_elevation"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="@dimen/setting_cv_padding">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/setting_linearLayout_Padding">
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_dividerHeight"
+            android:layout_marginBottom="@dimen/setting_dividerMarginBottom"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/hLightColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gudea"
+            android:text="@string/hLightColorText"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="@dimen/setting_textSize"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/setting_RadioGroupStart">
+
+            <RadioButton
+                android:id="@+id/hColor1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hColor1" />
+
+            <RadioButton
+                android:id="@+id/hColor2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hColor2" />
+
+            <RadioButton
+                android:id="@+id/hColor3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hColor3" />
+
+            <RadioButton
+                android:id="@+id/hColor4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:buttonTint="@color/hColor4"
+/>
+
+        </RadioGroup>
+
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_dividerHeight"
+            android:layout_marginTop="@dimen/setting_dividerMarginTop"
+            android:layout_marginBottom="@dimen/setting_dividerMarginBottom"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gudea"
+            android:text="@string/orderByText"
+            android:textSize="@dimen/setting_textSize"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:id="@+id/asc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:fontFamily="@font/gudea"
+                android:padding="@dimen/setting_radioButton2Padding"
+                android:text="@string/first_last"
+                android:textAlignment="viewStart" />
+
+            <RadioButton
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableRight="@android:drawable/btn_radio"
+                android:fontFamily="@font/gudea"
+                android:padding="@dimen/setting_radioButton2Padding"
+                android:text="@string/last_first"
+                android:textAlignment="viewStart" />
+        </RadioGroup>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/setting_dividerHeight"
+            android:layout_marginTop="@dimen/setting_dividerMarginTop"
+            android:layout_marginBottom="@dimen/setting_dividerMarginBottom"
+            android:layout_weight="1"
+            android:background="?android:attr/listDivider" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

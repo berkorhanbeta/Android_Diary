@@ -1,0 +1,44 @@
+<resources>
+
+
+    <string name="mainTitle">Günlüğüm</string>
+    <string name="mSearch">Ara</string>
+    <string name="mAdd">Yeni yazı ekle</string>
+    <string name="mDeleteAll">Tüm Yazılarımı Sil</string>
+    <string name="settings">Ayarlar</string>
+
+    <string name="delAllQuestion">Tüm yazılarınızı silmek istediğinizden emin misiniz?</string>
+    <string name="delQuestion">Bu yazınızı silmek istediğinize emin misiniz?</string>
+    <string name="delete">Sil</string>
+    <string name="cancel">Hayır</string>
+
+    <string name="showSecret">Günlük Gösteriliyor</string>
+
+    <!-- Buttons -->
+    <string name="editBTN">Düzenle</string>
+    <string name="delBTN">Sil</string>
+
+
+    <string name="secretTitle">Günlüğünüzün Başlığı</string>
+    <string name="secretDesc">Günlüğünüzün İçeriği</string>
+    <string name="highlight">Günlüğü Öne Çıkar</string>
+
+
+    <string name="hLightColorText">Öne Çıkarılan Günlüklerin Rengi</string>
+    <string name="orderByText">Günlükleri Şuna Göre Listele</string>
+    <string name="first_last">İlk eklenenden sonuncuya</string>
+    <string name="last_first">Sondan birinciye</string>
+
+    <string name="enterPass">Şifrenizi Girin</string>
+    <string name="enterBtn">Gir</string>
+    <string name="saveBtn">Kaydet</string>
+    <string name="wrongPass">Yanlış Bir Şifre Girdiniz!</string>
+    <string name="newPass">Bir Şifre Girin</string>
+    <string name="createPass">Yeni Şifre Oluşturun</string>
+
+
+
+
+
+
+</resources>
