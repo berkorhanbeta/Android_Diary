@@ -1,0 +1,6 @@
+
+This project was developed educational purposes for ISE.
+        Plagiarism may result in your expulsion for higher education.
+        This code detect by any plagiarism checkers. So that's way I do not recommend to use this application for your HomeWork or Project Assignment.
+        You can study the code in this project.
+        Read it, review it and learn it but please do not use my code.
