@@ -36,4 +36,4 @@ You can delete diaries saved in SQLite database.
 
 
 # Screenshots From Application
-![Screenshot](appbeta-diary.gif)
+![Screenshot](appbeta-diary-new.gif)
