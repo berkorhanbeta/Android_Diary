@@ -21,4 +21,6 @@
     <color name="hColor3">#FFFFECB3</color>
     <color name="hColor4">#FFB7A8FA</color>
     <color name="hColor5">#0F484E</color>
+
+    <color name="hintColor">#9E404040</color>
 </resources>

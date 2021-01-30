@@ -3,6 +3,7 @@ package ise308.orhan_berk_mysecrets.util
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
+import android.text.format.DateFormat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +18,8 @@ import ise308.orhan_berk_mysecrets.R
 import ise308.orhan_berk_mysecrets.activity.MainActivity
 import ise308.orhan_berk_mysecrets.activity.ShowSecretActivity
 import ise308.orhan_berk_mysecrets.activity.UpdateSecretActivity
-import ise308.orhan_berk_mysecrets.database.DatabaseSecret
 import ise308.orhan_berk_mysecrets.fragment.UpdateSecretFragment
+import java.util.*
 
 
 class HolderAdapter() : RecyclerView.Adapter<HolderAdapter.holderStructure>(){
@@ -30,6 +31,8 @@ class HolderAdapter() : RecyclerView.Adapter<HolderAdapter.holderStructure>(){
 
     var seciliRenk = 0
     var cardColor = 0
+    var diaryDate: String = ""
+
 
     constructor(context: Context?, secretList : ArrayList<HolderStructure>?) : this(){
         this.context = context
@@ -51,18 +54,27 @@ class HolderAdapter() : RecyclerView.Adapter<HolderAdapter.holderStructure>(){
 
     override fun onBindViewHolder(holder: holderStructure, position: Int) {
         mainActivity = MainActivity()
+        // Setting Items infos inside of ListView
         val model = secretList!!.get(position)
         val id = model.id
         val title = model.title
         val desc = model.description
         val hLight = model.highlight.toInt()
+        val dTime = model.diaryTime.toLong()
+        val dLoc = model.diaryLocation
 
         holder.txtTitle.text = title
         holder.txtDesc.text = desc
 
+        diaryDate = DateFormat.format("dd/MM/yyyy", Date(dTime)).toString()
+
+        holder.itemLocation.text = dLoc
+        holder.itemTime.text = diaryDate
+
         checkHighLightColor()
         val textColor = ContextCompat.getColor(context!!, R.color.white)
 
+        // Checking Highlighted Color and Changing The Background Of CardView
         when (seciliRenk) {
             0 ->  { cardColor = ContextCompat.getColor(context!!, R.color.hColor2) }
             1 ->  { cardColor = ContextCompat.getColor(context!!, R.color.hColor1) }
@@ -71,25 +83,31 @@ class HolderAdapter() : RecyclerView.Adapter<HolderAdapter.holderStructure>(){
             4 ->  { cardColor = ContextCompat.getColor(context!!, R.color.hColor4) }
         }
 
+        // If Diary is Highlighted Then Change The Color Of Background
         if (hLight == 1){
             holder.cardView.setCardBackgroundColor(cardColor)
             holder.txtDesc.setTextColor(textColor)
             holder.txtTitle.setTextColor(textColor)
+            holder.itemTime.setTextColor(textColor)
+            holder.itemLocation.setTextColor(textColor)
         }
 
+        // Opening Diary
         holder.openSecretButton.setOnClickListener {
 
            openSecret(id)
 
         }
-        
+
+        // Editing Diary
         holder.editButton.setOnClickListener { 
             
             //updateSecret(id)
             updateSecretDialog(id)
             
         }
-        
+
+        // Deleting Diary
         holder.delButton.setOnClickListener {
 
             deleteSecret(id)
@@ -98,6 +116,7 @@ class HolderAdapter() : RecyclerView.Adapter<HolderAdapter.holderStructure>(){
     }
 
 
+    // Delete Function
     private fun deleteSecret(id : String){
         val builder : AlertDialog.Builder = AlertDialog.Builder(context)
         builder.setTitle((context as AppCompatActivity).getString(R.string.delQuestion)).setPositiveButton((context as AppCompatActivity).getString(R.string.delete)){
@@ -108,25 +127,28 @@ class HolderAdapter() : RecyclerView.Adapter<HolderAdapter.holderStructure>(){
         }.show()
     }
 
+    // Open Function
     private fun openSecret(id : String){
         val intent = Intent(context, ShowSecretActivity::class.java)
         intent.putExtra("S_ID", id)
         context!!.startActivity(intent)
     }
 
+    // Update Function With Activity
     private fun updateSecret(id: String) {
         val intent = Intent(context, UpdateSecretActivity::class.java)
         intent.putExtra("S_ID", id)
         context!!.startActivity(intent)
     }
 
-
+    // Update Function With Fragment
     private fun updateSecretDialog(id : String){
         val dialog = UpdateSecretFragment()
         dialog.getSecretID(id)
         dialog.show((context as AppCompatActivity).supportFragmentManager, "")
     }
 
+    // CardView Structure
     inner class holderStructure(itemView: View) : RecyclerView.ViewHolder(itemView){
 
         var openSecretButton : LinearLayout = itemView.findViewById(R.id.openContent)
@@ -135,7 +157,8 @@ class HolderAdapter() : RecyclerView.Adapter<HolderAdapter.holderStructure>(){
         var editButton : Button = itemView.findViewById(R.id.editBTN)
         var delButton : Button = itemView.findViewById(R.id.delBTN)
         var cardView : CardView = itemView.findViewById(R.id.cardView)
-
+        var itemLocation : TextView = itemView.findViewById(R.id.itemLocation)
+        var itemTime : TextView = itemView.findViewById(R.id.itemTime)
     }
 
 

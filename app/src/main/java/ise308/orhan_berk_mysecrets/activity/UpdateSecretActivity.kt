@@ -18,10 +18,14 @@ class UpdateSecretActivity : AppCompatActivity() {
     lateinit var descTxt : EditText
     lateinit var addButton : Button
     lateinit var checkBox: CheckBox
+    lateinit var addLocation : EditText
     private var s_id : String? = null
     private var s_title : String? = null
     private var s_desc : String? = null
     private var s_hLight : Int? = 0
+    private var s_time : String? = null
+    private var s_location : String? = null
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +40,9 @@ class UpdateSecretActivity : AppCompatActivity() {
         descTxt = findViewById(R.id.addDescription)
         addButton = findViewById(R.id.addBTN)
         checkBox = findViewById(R.id.checkBox)
+        addLocation = findViewById(R.id.addLocation)
 
+        // Getting Intent Values
         val intent = intent
         s_id = intent.getStringExtra("S_ID")
 
@@ -54,6 +60,7 @@ class UpdateSecretActivity : AppCompatActivity() {
 
     fun getDetails(){
 
+            // Getting Diary Details From Database
         val selectQuery = "SELECT * FROM ${DatabaseSecret.TABLE_NAME} WHERE ${DatabaseSecret.S_ID} =\"$s_id\""
         val dB = dbHelper!!.writableDatabase
         val cursor = dB.rawQuery(selectQuery, null)
@@ -64,6 +71,10 @@ class UpdateSecretActivity : AppCompatActivity() {
                 val title = "" + cursor.getString(cursor.getColumnIndex(DatabaseSecret.S_TITLE))
                 val desc = "" + cursor.getString(cursor.getColumnIndex(DatabaseSecret.S_DESCRIPTION))
                 val hLight = 0 + cursor.getInt(cursor.getColumnIndex(DatabaseSecret.S_HIGHLIGHT))
+                val dTime = "" + cursor.getString(cursor.getColumnIndex(DatabaseSecret.S_DIARY_TIME))
+                val dLocation = "" + cursor.getString(cursor.getColumnIndex(DatabaseSecret.S_LOCATION))
+                addLocation.setText(dLocation)
+                s_time = dTime
 
                 titleTxt.setText(title)
                 descTxt.setText(desc)
@@ -81,11 +92,14 @@ class UpdateSecretActivity : AppCompatActivity() {
 
         s_title = titleTxt.text.toString()
         s_desc = descTxt.text.toString()
+        s_location = addLocation.text.toString()
+
         if (checkBox.isChecked){
             s_hLight = 1
         }
-
-        dbHelper?.updateData("$s_id", "$s_title", "$s_desc", "$s_hLight")
+        // Updating Diary Details In Database
+        // Calling an SQL Qeury
+        dbHelper?.updateData("$s_id", "$s_title", "$s_desc", "$s_hLight", "$s_time", "$s_location")
 
         //Toast.makeText(this, "Secret Added $s_id", Toast.LENGTH_SHORT).show()
 

@@ -41,6 +41,9 @@
     <dimen name="add_ayrac">2dp</dimen>
     <dimen name="add_ayracMargin">5dp</dimen>
 
+    <dimen name="add_location_textSize">14sp</dimen>
+    <dimen name="add_location_bottom_margin">5dp</dimen>
+    <dimen name="add_location_top_margin">5dp</dimen>
 
     <!-- Setting Content -->
     <dimen name="setting_cv_radius">5dp</dimen>
@@ -72,6 +75,7 @@
     <dimen name="saveBTN_margin">50dp</dimen>
     <dimen name="saveBTN_marginStart">100dp</dimen>
     <dimen name="saveBTN_marginEnd">100dp</dimen>
+    <dimen name="saveBTN_height">60dp</dimen>
 
 
 

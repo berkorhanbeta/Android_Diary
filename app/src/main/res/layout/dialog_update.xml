@@ -28,7 +28,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/addTitle"
+                android:id="@+id/editTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -37,6 +37,7 @@
                 android:background="@null"
                 android:fontFamily="@font/gudea_bold"
                 android:hint="@string/secretTitle"
+                android:textColorHint="@color/hintColor"
                 android:textSize="@dimen/show_titleTextSize"
                 android:textStyle="bold" />
 
@@ -44,22 +45,47 @@
                 android:id="@+id/addAyrac2"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/add_ayrac"
-                android:layout_below="@id/addTitle"
+                android:layout_below="@id/editTitle"
                 android:layout_marginTop="@dimen/add_ayracMargin"
                 android:background="@color/ayrac" />
 
             <EditText
-                android:id="@+id/addDescription"
+                android:id="@+id/editLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/addAyrac2"
+                android:layout_marginBottom="@dimen/add_location_bottom_margin"
+                android:layout_marginTop="@dimen/add_location_top_margin"
+                android:background="@null"
+                android:fontFamily="@font/gudea_bold"
+                android:hint="@string/locationHint"
+                android:textColorHint="@color/hintColor"
+                android:textSize="@dimen/add_location_textSize"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/addAyrac3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/add_ayrac"
+                android:layout_below="@id/editLocation"
+                android:layout_marginTop="@dimen/add_ayracMargin"
+                android:background="@color/ayrac" />
+
+            <EditText
+                android:id="@+id/editDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/addAyrac"
-                android:layout_below="@+id/addAyrac2"
+                android:layout_below="@+id/addAyrac3"
                 android:background="@null"
                 android:fontFamily="@font/gudea"
                 android:gravity="top"
                 android:hint="@string/secretDesc"
                 android:inputType="textMultiLine"
                 android:padding="@dimen/add_descriptionPadding"
+                android:textColorHint="@color/hintColor"
                 android:textSize="12sp" />
 
             <TextView

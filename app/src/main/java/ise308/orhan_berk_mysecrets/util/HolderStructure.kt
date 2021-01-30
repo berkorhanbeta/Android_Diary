@@ -4,5 +4,7 @@ class HolderStructure(
         var id: String,
         var title: String,
         var description: String,
-        var highlight : String
+        var highlight : String,
+        var diaryTime : String,
+        var diaryLocation : String
 )

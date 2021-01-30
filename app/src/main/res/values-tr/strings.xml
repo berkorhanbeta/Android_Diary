@@ -22,7 +22,7 @@
     <string name="secretTitle">Günlüğünüzün Başlığı</string>
     <string name="secretDesc">Günlüğünüzün İçeriği</string>
     <string name="highlight">Günlüğü Öne Çıkar</string>
-
+    <string name="locationHint">Yer</string>
 
     <string name="hLightColorText">Öne Çıkarılan Günlüklerin Rengi</string>
     <string name="orderByText">Günlükleri Şuna Göre Listele</string>
@@ -35,8 +35,15 @@
     <string name="wrongPass">Yanlış Bir Şifre Girdiniz!</string>
     <string name="newPass">Bir Şifre Girin</string>
     <string name="createPass">Yeni Şifre Oluşturun</string>
-
-
+    <string name="reenterPass">Yeni Şifrenizi Onaylayın</string>
+    <string name="currentPass">Eski Şifreniz</string>,
+    <string name="changePass">Değiştir</string>
+    <string name="notMatch">Yeni şifren birbiri ile eşleşmiyor!</string>
+    <string name="previousPassWrong">Eski şifreni yanlış girdin!</string>
+    <string name="notBeTheSame">Yeni Şifren Eski Şifren İle Aynı Olamaz!</string>
+    <string name="changePassword">Şifremi Değiştir</string>
+    <string name="successChange">Şifren Başarıyla Değiştirildi!</string>
+    <string name="nullSpace">Tüm alanları doldurmalısınız!\nBoş alan bırakmamalısınız.</string>
 
 
 

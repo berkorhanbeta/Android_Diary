@@ -57,13 +57,17 @@ class MainActivity : AppCompatActivity() {
             recyclerView!!.adapter = holderAdapter
     }
 
-
+    // Search Function
     private fun searchSecret(query : String){
+        // Searching data inside of database
+        // We are calling an SQL query
             val holderAdapter = HolderAdapter(this, dbHelper.searchData(query))
             recyclerView!!.adapter = holderAdapter
     }
 
 
+    // When user click the Delete All Button
+    // We Open an dialog and asking are you sure you want to delete.
     private fun deleteAll(){
         val builder : AlertDialog.Builder = AlertDialog.Builder(this)
         builder.setTitle(getString(R.string.delAllQuestion)).setPositiveButton(getString(R.string.delete)){
@@ -158,6 +162,7 @@ class MainActivity : AppCompatActivity() {
         loadSecret()
     }
 
+    // Getting " How To Order By " Value From SharedPreference
     fun checkOrderBy(){
         val prefs = getSharedPreferences("MySecrets", Context.MODE_PRIVATE)
         siralamaTuru = prefs.getInt("orderBy", 0)

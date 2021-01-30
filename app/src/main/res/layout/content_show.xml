@@ -27,6 +27,24 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/textDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gudea"
+                        android:text="@string/demoTime"
+                        android:textAlignment="textEnd"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/textLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gudea"
+                        android:text="@string/demoLocation"
+                        android:textAlignment="textEnd"
+                        android:textStyle="italic" />
+
+                    <TextView
                         android:id="@+id/showTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

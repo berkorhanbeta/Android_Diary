@@ -22,6 +22,7 @@
     <string name="secretTitle">Title Of The Diary</string>
     <string name="secretDesc">Content Of The Diary</string>
     <string name="highlight">Highlight The Diary</string>
+    <string name="locationHint">Location</string>
 
 
     <string name="hLightColorText">Change The Highlight Color Of Diary</string>
@@ -30,11 +31,20 @@
     <string name="last_first">Last to First</string>
 
     <string name="enterPass">Enter Your Password</string>
-    <string name="enterBtn">Open</string>
+    <string name="enterBtn">Login</string>
     <string name="saveBtn">Save</string>
     <string name="wrongPass">Your Password Is Wrong!</string>
     <string name="newPass">Enter A Password</string>
     <string name="createPass">Create New Password</string>
+    <string name="reenterPass">Confirm Your New Password</string>
+    <string name="currentPass">Your Current Password</string>,
+    <string name="changePass">Change</string>
+    <string name="notMatch">Your New Password is Not Match Each Other!</string>
+    <string name="previousPassWrong">You are entered wrong password!</string>
+    <string name="notBeTheSame">New and Old Password Cannot be The Same!</string>
+    <string name="successChange">Your Password Successfuly Changed!</string>
+    <string name="changePassword">Change Your Password</string>
+    <string name="nullSpace">You need to fill every box!\nThere cannot be empty space left.</string>
 
     <!-- Demo Text -->
     <string name="title" tools:ignore="MissingTranslation">What Is Lorem Ipsum</string>
@@ -45,7 +55,9 @@
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </string>
 
-
+    <string name="demoTime" translatable="false">27.08.2020</string>
+    <string name="demoLocation" translatable="false">Ankara</string>
+    <string name="emptySpace" translatable="false">Empty Space!</string>
 
 
 </resources>

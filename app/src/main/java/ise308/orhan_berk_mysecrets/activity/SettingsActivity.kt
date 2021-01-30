@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -12,12 +13,14 @@ import ise308.orhan_berk_mysecrets.R
 
 class SettingsActivity : AppCompatActivity() {
 
+    // Objects and Variables
     lateinit var color1 : RadioButton
     lateinit var color2 : RadioButton
     lateinit var color3 : RadioButton
     lateinit var color4 : RadioButton
     lateinit var asc : RadioButton
     lateinit var desc : RadioButton
+    lateinit var changePasswordBTN : Button
 
     var seciliRenk = 0
     var orderBy = 0
@@ -25,6 +28,8 @@ class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
+
+        // ActionBar Settings
         setSupportActionBar(findViewById(R.id.toolbar))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
@@ -40,6 +45,9 @@ class SettingsActivity : AppCompatActivity() {
         asc = findViewById(R.id.asc)
         desc = findViewById(R.id.desc)
 
+        changePasswordBTN = findViewById(R.id.btnPasswordChange)
+
+        // We are checking which one is checked before
         when(orderBy){
             0 -> desc.isChecked = true
             1 -> asc.isChecked = true
@@ -53,6 +61,7 @@ class SettingsActivity : AppCompatActivity() {
             orderBySelected(1)
         }
 
+        // We are checking which one is checked before
         when (seciliRenk) {
             1 -> color1.isChecked = true
             2 -> color2.isChecked = true
@@ -74,6 +83,12 @@ class SettingsActivity : AppCompatActivity() {
 
         color4.setOnClickListener {
             sethLightColor(4)
+        }
+
+        changePasswordBTN.setOnClickListener {
+
+            changePass()
+
         }
 
     }
@@ -116,6 +131,9 @@ class SettingsActivity : AppCompatActivity() {
         return true
     }
 
+
+    // Getting - Setting Shared Preferences Values
+
     fun sethLightColor(seciliRenk : Int){
         val prefs = getSharedPreferences("MySecrets", Context.MODE_PRIVATE)
         val editor = prefs.edit()
@@ -132,7 +150,16 @@ class SettingsActivity : AppCompatActivity() {
 
     fun getSharedPref(){
         val prefs = getSharedPreferences("MySecrets", Context.MODE_PRIVATE)
-        seciliRenk = prefs.getInt("highLightRenk", 0)
+        seciliRenk = prefs.getInt("highLightRenk", 2)
         orderBy = prefs.getInt("orderBy", 0)
+    }
+
+
+    fun changePass(){
+
+        val intent = Intent(this, PasswordActivity::class.java)
+        intent.putExtra("change_password", 1)
+        startActivity(intent)
+
     }
 }
